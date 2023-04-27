@@ -32,7 +32,7 @@ function showCollection(array){
 showCollection(collection);
 //test showCollection function
 
-function findByArtist (artist, array){
+function findByArtist (artist, array){//I used an array input just incase you want to use different collections.
     let results = [];
     for(let i=0; i<array.length; i++){
         if (array[i].artist===artist){
@@ -44,4 +44,9 @@ function findByArtist (artist, array){
     // did this to clean it up if that was the intended result. 
 }
 //end findByArtist
-
+//test with Kid Cudi
+console.log(findByArtist ('Kid Cudi',collection));
+//test with Drake
+console.log(findByArtist ('Drake',collection));
+//test with Lil' Wayne (not on the list)
+console.log(findByArtist ('Lil Wayne',collection));
