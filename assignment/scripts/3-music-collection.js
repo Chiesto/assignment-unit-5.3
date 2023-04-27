@@ -11,7 +11,13 @@ function addToCollection(title, artist, yearPublished){
 }
 //end addToCollection - adds music to my music collection 
 //(title, artist, year published).
-addToCollection('Pursuit of Happiness', 'Kid Cudi', '2009');
+console.log(addToCollection('Man on the Moon', 'Kid Cudi', '2009'));//1
+console.log(addToCollection('A Kid Named Cudi', 'Kid Cudi', '2008'));//2
+console.log(addToCollection('2014 Forest Hills Drive', 'J. Cole', '2014'));//3
+console.log(addToCollection('Purple Rain', 'Prince', '1984'));//4
+console.log(addToCollection('Nothing Was the Same', 'Drake', '2013'));//5
+console.log(addToCollection('Thank Me Later', 'Drake', '2010'));//6
+//added 6 albums to my 'collection'.
 console.log(collection);
 //execute the function addToCollection and test it by 
 //console logging the newly updated collection.
