@@ -31,3 +31,17 @@ function showCollection(array){
 //end showCollection
 showCollection(collection);
 //test showCollection function
+
+function findByArtist (artist, array){
+    let results = [];
+    for(let i=0; i<array.length; i++){
+        if (array[i].artist===artist){
+            results.push(artist);
+        }
+    }
+    return results;
+    //return results[0]; - wasn't sure if you wanted the name repeated in the array so I 
+    // did this to clean it up if that was the intended result. 
+}
+//end findByArtist
+
