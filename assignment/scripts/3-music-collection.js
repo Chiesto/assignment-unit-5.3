@@ -19,5 +19,15 @@ console.log(addToCollection('Nothing Was the Same', 'Drake', '2013'));//5
 console.log(addToCollection('Thank Me Later', 'Drake', '2010'));//6
 //added 6 albums to my 'collection'.
 console.log(collection);
-//execute the function addToCollection and test it by 
-//console logging the newly updated collection.
+//console log the newly updated collection.
+
+function showCollection(array){
+    console.log("There are", array.length, "albums in my collection.");
+    for(let i = 0; i<array.length; i++){
+        console.log(`${array[i].title} by ${array[i].artist}, published in ${array[i].yearPublished}`);
+    }
+    return array;
+}
+//end showCollection
+showCollection(collection);
+//test showCollection function
