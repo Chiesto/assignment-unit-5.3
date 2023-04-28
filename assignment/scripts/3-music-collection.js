@@ -64,6 +64,10 @@ const altSearchProperties = {
     year: '2010',
     trackName: 'Track 1'
 }
+const searchProp2 = {
+    artist: 'Drake',
+    year: '2010'
+}
 
 function search(searchCriteria){
     if (!searchCriteria || searchCriteria.length === 0){
@@ -103,4 +107,6 @@ console.log(search(searchProperties));
 console.log(search(altSearchProperties));
 //TEST search function (no input values) X
 console.log(search());
+//TEST to make sure that the conditionals were working properly (no tracks in the search criteria)
+console.log(search(searchProp2));
 
