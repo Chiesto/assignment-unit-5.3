@@ -1,13 +1,13 @@
 console.log('***** Music Collection *****')
 let collection = [];
 function addToCollection(title, artist, yearPublished){
-    const music = {
+    const album = {
         title,
         artist,
         yearPublished
     };
-    collection.push(music);
-    return music;
+    collection.push(album);
+    return album;
 }
 //end addToCollection - adds music to my music collection 
 //(title, artist, year published).
@@ -36,17 +36,49 @@ function findByArtist (artist, array){//I used an array input just incase you wa
     let results = [];
     for(let i=0; i<array.length; i++){
         if (array[i].artist===artist){
-            results.push(artist);
+            results.push(array[i]);
         }
     }
     return results;
-    //return results[0]; - wasn't sure if you wanted the name repeated in the array so I 
-    // did this to clean it up if that was the intended result. 
 }
 //end findByArtist
-//test with Kid Cudi
+//test with Kid Cudi (first 2 items on the list)
 console.log(findByArtist ('Kid Cudi',collection));
-//test with Drake
+//test with Drake (later on in the list)
 console.log(findByArtist ('Drake',collection));
 //test with Lil' Wayne (not on the list)
 console.log(findByArtist ('Lil Wayne',collection));
+
+console.log("-----Stretch Goals-----");
+
+const searchProperties = {
+    artist: 'Ray Charles',
+    year: '1957'
+}
+const altSearchProperties = {
+    artist: 'Drake',
+    year: '2010'
+}
+
+function search(searchCriteria){
+    if (!searchCriteria || searchCriteria.length === 0){
+        return collection;
+    } // if no search criteria is entered or the search criteria is empty, return the collection.
+
+    const newArray = [];
+
+    for (let i=0; i<collection.length; i++){
+        let album = collection[i];
+        if (searchCriteria.artist === album.artist && searchCriteria.year === album.yearPublished){
+            newArray.push(album);
+        }
+    }
+    return newArray;
+}
+//end search function
+//TEST search function (values that are NOT in my collection)
+console.log(search(searchProperties));
+//TEST search function (values that ARE in my collection)
+console.log(search(altSearchProperties));
+//TEST search function (no input values)
+console.log(search());
