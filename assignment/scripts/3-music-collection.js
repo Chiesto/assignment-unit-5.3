@@ -74,7 +74,7 @@ function search(searchCriteria){
     if (searchCriteria.trackName){//if the searchCriteria has a trackName 
         for(let b = 0; b<collection.length; b++){//loop through the collection's albums
             let album = collection[b];
-            for(let v = 0; v<album.length; v++){//loop through the album's (collection[b]) tracks
+            for(let v = 0; v<album.tracks.length; v++){//loop through the album's (collection[b]) tracks
                 if (searchCriteria.trackName === album.tracks[v].trackName){//if the searchCriteria trackName matches the album's trackName, add to my newArray
                     newArray.push(album);
                 }
