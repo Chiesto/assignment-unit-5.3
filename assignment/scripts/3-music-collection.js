@@ -76,9 +76,9 @@ function search(searchCriteria){
     return newArray;
 }
 //end search function
-//TEST search function (values that are NOT in my collection)
+//TEST search function (values that are NOT in my collection) X
 console.log(search(searchProperties));
-//TEST search function (values that ARE in my collection)
+//TEST search function (values that ARE in my collection) X
 console.log(search(altSearchProperties));
-//TEST search function (no input values)
+//TEST search function (no input values) X
 console.log(search());
