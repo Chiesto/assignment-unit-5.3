@@ -98,7 +98,8 @@ function search(searchCriteria){
 //end search function
 //TEST search function (values that are NOT in my collection) X
 console.log(search(searchProperties));
-//TEST search function (values that ARE in my collection) X
+//TEST search function (values that ARE in my collection) X - should pull 2 'albums' from my collection
+// made 2 tracks on different albums (one for each album) have the same name just to make sure it was looping all the way through
 console.log(search(altSearchProperties));
 //TEST search function (no input values) X
 console.log(search());
